@@ -103,16 +103,7 @@ Options: `--max-premium <pct>`, `--reference cheapest|median`, `--allow-unlisted
 
 ## Part of the agent inference kit
 
-Small tools that each do one job and work together. Use any one on its own.
-
-- [justweight](https://github.com/xbtMelchizedek/justweight): one price table for every inference venue (Flop, Pearl, Venice, Chutes, each OpenRouter provider, local) in one unit, with each price linked to its source.
-- [justweight `infer`](https://github.com/xbtMelchizedek/justweight#infer-route-one-call-with-caps-and-a-receipt): an MCP tool that routes one call to the cheapest venue meeting your privacy floor, under hard spend caps, and returns chained receipts.
-- [agent-price-feed](https://github.com/xbtMelchizedek/agent-price-feed): alerts by JSON Feed, RSS, CLI and MCP when those prices move, a cheaper route appears, or Flop lists a model.
-- [agent-spendcap](https://github.com/xbtMelchizedek/agent-spendcap): a budget policy for agents: holds before each call, settlement from real usage, a hash-chained ledger, and a drop-in fetch for OpenAI-compatible APIs.
-- [agent-cost-proxy](https://github.com/xbtMelchizedek/agent-cost-proxy): one command, a local proxy for coding agents that records each call's real cost and the cheapest listed price for the same tokens, with optional caps.
-- [x402-price-check](https://github.com/xbtMelchizedek/x402-price-check) (this repo): checks an x402 402 quote against justweight list prices and your agent-spendcap budget before an agent pays.
-- [flop-receipt-root](https://github.com/xbtMelchizedek/flop-receipt-root): proves a Flop compute settlement to an EVM contract without a bridge, and checks one receipt offline.
-- [flop-spend](https://github.com/xbtMelchizedek/flop-spend): has an address spent on Flop inference yet? Settled spend per address, re-read on chain, as a CLI, MCP tool and dashboard.
+x402-price-check is one of a set of small tools for agents that pay for inference. Each does one job, and they work together. The full list is sorted by job, with a one-line command and a live number for each: **https://xbtmelchizedek.github.io/agent-inference-kit/**. Its source is [kit.json](https://github.com/xbtMelchizedek/agent-inference-kit/blob/main/kit.json), so adding a tool takes one change there.
 
 ## Develop
 
