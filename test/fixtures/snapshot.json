@@ -1,0 +1,1004 @@
+{
+ "generatedAt": "2026-11-24T21:15:08.951Z",
+ "_trimmed": "real justweight snapshot; only offers for the models these tests use are kept",
+ "sources": [
+  {
+   "id": "chutes-bittensor",
+   "url": "https://llm.chutes.ai/v1/models",
+   "ok": true,
+   "fetchedAt": "2026-11-24T21:14:56.895Z",
+   "count": 20
+  },
+  {
+   "id": "coingecko",
+   "url": "https://api.coingecko.com/api/v3/simple/price?ids=pearl-2,bittensor,flop-labs&vs_currencies=usd&include_last_updated_at=true",
+   "ok": true,
+   "fetchedAt": "2026-11-24T21:14:56.897Z",
+   "count": null
+  },
+  {
+   "id": "flop-gateway",
+   "url": "https://api.flop.network/v1/models",
+   "ok": true,
+   "fetchedAt": "2026-11-24T21:14:56.865Z",
+   "count": 3
+  },
+  {
+   "id": "flop-price-index",
+   "url": "https://explorer.devnet.flop.network/api/price-index/v1/preview",
+   "ok": false,
+   "fetchedAt": "2026-11-24T21:14:56.892Z",
+   "error": "HTTP 503: {\"error\":\"Indexer read capacity exhausted; retry later\"}"
+  },
+  {
+   "id": "flop-testnet",
+   "url": "https://testnet.flopscan.io/api/models",
+   "ok": false,
+   "fetchedAt": "2026-11-24T21:14:56.893Z",
+   "error": "HTTP 503: {\"error\":\"Era-T reader unavailable\"}"
+  },
+  {
+   "id": "flop-testnet-price-index",
+   "url": "https://testnet.flopscan.io/api/price-index/v1/preview",
+   "ok": false,
+   "fetchedAt": "2026-11-24T21:14:56.894Z",
+   "error": "HTTP 503: {\"error\":\"Era-T reader unavailable\"}"
+  },
+  {
+   "id": "openrouter",
+   "url": "https://openrouter.ai/api/v1/models",
+   "ok": true,
+   "fetchedAt": "2026-11-24T21:14:56.894Z",
+   "count": 461
+  },
+  {
+   "id": "openrouter-providers:deepseek/deepseek-v4.1-flash-1017",
+   "url": "https://openrouter.ai/deepseek/deepseek-v4.1-flash-1017",
+   "ok": true,
+   "fetchedAt": "2026-11-24T21:14:56.899Z",
+   "count": 54
+  },
+  {
+   "id": "openrouter-providers:qwen/qwen3.8-27b",
+   "url": "https://openrouter.ai/qwen/qwen3.8-27b",
+   "ok": true,
+   "fetchedAt": "2026-11-24T21:14:56.899Z",
+   "count": 21
+  },
+  {
+   "id": "openrouter-providers:thinkingmachines/inkling-2-mini",
+   "url": "https://openrouter.ai/thinkingmachines/inkling-2-mini",
+   "ok": true,
+   "fetchedAt": "2026-11-24T21:14:56.898Z",
+   "count": 5
+  },
+  {
+   "id": "pearl-labs",
+   "url": "https://pearlresearch.ai/pricing",
+   "ok": true,
+   "fetchedAt": "2026-11-24T21:14:56.896Z",
+   "count": 6
+  },
+  {
+   "id": "venice",
+   "url": "https://api.venice.ai/api/v1/models",
+   "ok": true,
+   "fetchedAt": "2026-11-24T21:14:56.896Z",
+   "count": 148
+  }
+ ],
+ "offers": [
+  {
+   "provider": "flop-gateway",
+   "network": "devnet",
+   "model": "qwen/qwen2.5-0.5b-instruct",
+   "unit": "FLOP",
+   "inPer1M": "1",
+   "outPer1M": "1",
+   "gnPerToken": {
+    "in": "2",
+    "out": "2"
+   },
+   "expiresAt": "2026-11-24T21:16:26.001Z",
+   "capacityTpm": 258648000,
+   "notes": [
+    "devnet FLOP has no value and earns nothing",
+    "price source: devnet-nominal; 44 miner quote(s)",
+    "feed flop_usd=1 is nominal, not a market rate; not used"
+   ],
+   "source": "https://api.flop.network/v1/models"
+  },
+  {
+   "provider": "flop-gateway",
+   "network": "devnet",
+   "model": "qwen/qwen3-14b",
+   "unit": "FLOP",
+   "inPer1M": "15",
+   "outPer1M": "15",
+   "gnPerToken": {
+    "in": "30",
+    "out": "30"
+   },
+   "expiresAt": "2026-11-24T21:16:26.001Z",
+   "capacityTpm": 3232668,
+   "notes": [
+    "devnet FLOP has no value and earns nothing",
+    "price source: devnet-nominal; 9 miner quote(s)",
+    "feed flop_usd=1 is nominal, not a market rate; not used"
+   ],
+   "source": "https://api.flop.network/v1/models"
+  },
+  {
+   "provider": "flop-gateway",
+   "network": "devnet",
+   "model": "qwen/qwen3-coder-30b-a3b-instruct-fp8",
+   "unit": "FLOP",
+   "inPer1M": "3.5",
+   "outPer1M": "3.5",
+   "gnPerToken": {
+    "in": "7",
+    "out": "7"
+   },
+   "expiresAt": "2026-11-24T21:16:26.001Z",
+   "capacityTpm": 235857,
+   "notes": [
+    "devnet FLOP has no value and earns nothing",
+    "price source: devnet-nominal; 1 miner quote(s)",
+    "feed flop_usd=1 is nominal, not a market rate; not used"
+   ],
+   "source": "https://api.flop.network/v1/models"
+  },
+  {
+   "provider": "openrouter",
+   "network": null,
+   "model": "anthropic/claude-sonnet-5.5",
+   "unit": "USD",
+   "inPer1M": "2",
+   "outPer1M": "10",
+   "notes": [
+    "OpenRouter list price; routes to an upstream provider"
+   ],
+   "source": "https://openrouter.ai/api/v1/models"
+  },
+  {
+   "provider": "openrouter",
+   "network": null,
+   "model": "anthropic/claude-sonnet-5.5:batch",
+   "unit": "USD",
+   "inPer1M": "1",
+   "outPer1M": "5",
+   "notes": [
+    "OpenRouter list price; routes to an upstream provider"
+   ],
+   "source": "https://openrouter.ai/api/v1/models"
+  },
+  {
+   "provider": "openrouter",
+   "network": null,
+   "model": "deepseek/deepseek-v4.1-flash",
+   "unit": "USD",
+   "inPer1M": "0.0507",
+   "outPer1M": "0.2028",
+   "notes": [
+    "OpenRouter list price; routes to an upstream provider"
+   ],
+   "source": "https://openrouter.ai/api/v1/models"
+  },
+  {
+   "provider": "openrouter",
+   "network": null,
+   "model": "deepseek/deepseek-v4.1-flash:batch",
+   "unit": "USD",
+   "inPer1M": "0.05",
+   "outPer1M": "0.15",
+   "notes": [
+    "OpenRouter list price; routes to an upstream provider"
+   ],
+   "source": "https://openrouter.ai/api/v1/models"
+  },
+  {
+   "provider": "openrouter",
+   "network": null,
+   "model": "qwen/qwen3.8-27b",
+   "unit": "USD",
+   "inPer1M": "0.06",
+   "outPer1M": "1.96",
+   "notes": [
+    "OpenRouter list price; routes to an upstream provider"
+   ],
+   "source": "https://openrouter.ai/api/v1/models"
+  },
+  {
+   "provider": "openrouter",
+   "network": null,
+   "model": "qwen/qwen3.8-27b:batch",
+   "unit": "USD",
+   "inPer1M": "0.16",
+   "outPer1M": "2",
+   "notes": [
+    "OpenRouter list price; routes to an upstream provider"
+   ],
+   "source": "https://openrouter.ai/api/v1/models"
+  },
+  {
+   "provider": "openrouter",
+   "network": null,
+   "model": "openai/gpt-5.6-luna-pro",
+   "unit": "USD",
+   "inPer1M": "0.2",
+   "outPer1M": "1.2",
+   "notes": [
+    "OpenRouter list price; routes to an upstream provider"
+   ],
+   "source": "https://openrouter.ai/api/v1/models"
+  },
+  {
+   "provider": "openrouter",
+   "network": null,
+   "model": "openai/gpt-5.6-luna-pro:batch",
+   "unit": "USD",
+   "inPer1M": "0.1",
+   "outPer1M": "0.6",
+   "notes": [
+    "OpenRouter list price; routes to an upstream provider"
+   ],
+   "source": "https://openrouter.ai/api/v1/models"
+  },
+  {
+   "provider": "openrouter:akashml/fp8",
+   "network": null,
+   "model": "qwen/qwen3.8-27b:fp8",
+   "unit": "USD",
+   "inPer1M": "0.225",
+   "outPer1M": "1.98",
+   "effective": {
+    "inPer1M": "0.215283468",
+    "outPer1M": "1.978646446",
+    "cacheHitRate": 0.054433865961555306,
+    "tokens": 1387114343
+   },
+   "latencyP50Ms": 2041,
+   "throughputP50": 8,
+   "endpointId": "c15e008c-6180-4155-8707-bde541bc7884",
+   "privacy": {
+    "retention": "zero (OpenRouter ZDR)",
+    "noRetention": true,
+    "tee": false,
+    "e2ee": false,
+    "local": false
+   },
+   "notes": [
+    "OpenRouter list price via AkashML",
+    "effective 0.215283 in / 1.978646 out per 1M at 5.4% cache hits",
+    "p50 latency 2041 ms, p50 8 tok/s (last 30 min)",
+    "zero data retention (OpenRouter ZDR)"
+   ],
+   "source": "https://openrouter.ai/qwen/qwen3.8-27b"
+  },
+  {
+   "provider": "openrouter:cerebras/fp16",
+   "network": null,
+   "model": "qwen/qwen3.8-27b:fp16",
+   "unit": "USD",
+   "inPer1M": "0.99",
+   "outPer1M": "1.49",
+   "effective": {
+    "inPer1M": "0.989812215",
+    "outPer1M": "1.488876096",
+    "cacheHitRate": 0.44839154431206674,
+    "tokens": 336709444
+   },
+   "latencyP50Ms": 288,
+   "throughputP50": 749,
+   "endpointId": "8eba9d88-f1f1-4280-a5da-29582a63cb76",
+   "privacy": {
+    "retention": "zero (OpenRouter ZDR)",
+    "noRetention": true,
+    "tee": false,
+    "e2ee": false,
+    "local": false
+   },
+   "notes": [
+    "OpenRouter list price via Cerebras",
+    "effective 0.989812 in / 1.488876 out per 1M at 44.8% cache hits",
+    "p50 latency 288 ms, p50 749 tok/s (last 30 min)",
+    "zero data retention (OpenRouter ZDR)"
+   ],
+   "source": "https://openrouter.ai/qwen/qwen3.8-27b"
+  },
+  {
+   "provider": "openrouter:chutes/fp8",
+   "network": null,
+   "model": "qwen/qwen3.8-27b:fp8",
+   "unit": "USD",
+   "inPer1M": "0.039",
+   "outPer1M": "1.25",
+   "effective": {
+    "inPer1M": "0.020446923",
+    "outPer1M": "1.24927051",
+    "cacheHitRate": 0.5268531388171687,
+    "tokens": 8557127129
+   },
+   "latencyP50Ms": 5485,
+   "throughputP50": 25,
+   "endpointId": "864c5d5b-af7f-4dda-a797-eb7d1e566f2f",
+   "privacy": {
+    "retention": "provider retains prompts",
+    "noRetention": false,
+    "tee": false,
+    "e2ee": false,
+    "local": false
+   },
+   "notes": [
+    "OpenRouter list price via Chutes",
+    "effective 0.020446 in / 1.24927 out per 1M at 52.7% cache hits",
+    "p50 latency 5485 ms, p50 25 tok/s (last 30 min)"
+   ],
+   "source": "https://openrouter.ai/qwen/qwen3.8-27b"
+  },
+  {
+   "provider": "openrouter:cloudflare",
+   "network": null,
+   "model": "qwen/qwen3.8-27b",
+   "unit": "USD",
+   "inPer1M": "0.45",
+   "outPer1M": "3.2",
+   "effective": {
+    "inPer1M": "0.449888502",
+    "outPer1M": "3.199587456",
+    "cacheHitRate": 0,
+    "tokens": 44316966
+   },
+   "latencyP50Ms": 426,
+   "throughputP50": 32,
+   "endpointId": "e56a0de7-f040-4dee-a36a-824fb379d883",
+   "privacy": {
+    "retention": "zero (OpenRouter ZDR)",
+    "noRetention": true,
+    "tee": false,
+    "e2ee": false,
+    "local": false
+   },
+   "notes": [
+    "OpenRouter list price via Cloudflare",
+    "effective 0.449888 in / 3.199587 out per 1M at 0.0% cache hits",
+    "p50 latency 426 ms, p50 32 tok/s (last 30 min)",
+    "zero data retention (OpenRouter ZDR)"
+   ],
+   "source": "https://openrouter.ai/qwen/qwen3.8-27b"
+  },
+  {
+   "provider": "openrouter:coreweave/fp8",
+   "network": null,
+   "model": "qwen/qwen3.8-27b:fp8",
+   "unit": "USD",
+   "inPer1M": "0.4",
+   "outPer1M": "3",
+   "effective": {
+    "inPer1M": "0.31168815",
+    "outPer1M": "3",
+    "cacheHitRate": 0.35317928729576126,
+    "tokens": 1785832845
+   },
+   "latencyP50Ms": 419,
+   "throughputP50": 90,
+   "endpointId": "adcebe80-d2d9-40e1-a7a4-37444a12860e",
+   "privacy": {
+    "retention": "zero (OpenRouter ZDR)",
+    "noRetention": true,
+    "tee": false,
+    "e2ee": false,
+    "local": false
+   },
+   "notes": [
+    "OpenRouter list price via CoreWeave",
+    "effective 0.311688 in / 3 out per 1M at 35.3% cache hits",
+    "p50 latency 419 ms, p50 90 tok/s (last 30 min)",
+    "zero data retention (OpenRouter ZDR)"
+   ],
+   "source": "https://openrouter.ai/qwen/qwen3.8-27b"
+  },
+  {
+   "provider": "openrouter:darkbloom/fp4",
+   "network": null,
+   "model": "qwen/qwen3.8-27b:fp4",
+   "unit": "USD",
+   "inPer1M": "0.035",
+   "outPer1M": "1.5",
+   "effective": {
+    "inPer1M": "0.031802549",
+    "outPer1M": "1.498998398",
+    "cacheHitRate": 0.1782498498885423,
+    "tokens": 2594660734
+   },
+   "latencyP50Ms": 1769,
+   "throughputP50": 22,
+   "endpointId": "c02dc976-15cf-47bb-9d26-bd5250f94b8d",
+   "privacy": {
+    "retention": "provider retains prompts",
+    "noRetention": false,
+    "tee": false,
+    "e2ee": false,
+    "local": false
+   },
+   "notes": [
+    "OpenRouter list price via Darkbloom",
+    "effective 0.031802 in / 1.498998 out per 1M at 17.8% cache hits",
+    "p50 latency 1769 ms, p50 22 tok/s (last 30 min)"
+   ],
+   "source": "https://openrouter.ai/qwen/qwen3.8-27b"
+  },
+  {
+   "provider": "openrouter:deepinfra/bf16",
+   "network": null,
+   "model": "qwen/qwen3.8-27b:bf16-batch",
+   "unit": "USD",
+   "inPer1M": "0.16",
+   "outPer1M": "2",
+   "effective": null,
+   "latencyP50Ms": null,
+   "throughputP50": null,
+   "endpointId": "20118467-2f63-4f7f-a025-2abd6cc94494",
+   "privacy": {
+    "retention": "provider says prompts not retained",
+    "noRetention": true,
+    "tee": false,
+    "e2ee": false,
+    "local": false
+   },
+   "notes": [
+    "OpenRouter list price via DeepInfra"
+   ],
+   "source": "https://openrouter.ai/qwen/qwen3.8-27b"
+  },
+  {
+   "provider": "openrouter:deepinfra/fp8",
+   "network": null,
+   "model": "qwen/qwen3.8-27b:fp8",
+   "unit": "USD",
+   "inPer1M": "0.2",
+   "outPer1M": "2.5",
+   "effective": {
+    "inPer1M": "0.093103275",
+    "outPer1M": "1.874278823",
+    "cacheHitRate": 0.5053955867082232,
+    "tokens": 7177066275
+   },
+   "latencyP50Ms": 848,
+   "throughputP50": 34,
+   "endpointId": "49f32a08-5bb2-47ee-ad99-1c7c0d65c757",
+   "privacy": {
+    "retention": "zero (OpenRouter ZDR)",
+    "noRetention": true,
+    "tee": false,
+    "e2ee": false,
+    "local": false
+   },
+   "notes": [
+    "OpenRouter list price via DeepInfra",
+    "effective 0.093103 in / 1.874278 out per 1M at 50.5% cache hits",
+    "p50 latency 848 ms, p50 34 tok/s (last 30 min)",
+    "zero data retention (OpenRouter ZDR)"
+   ],
+   "source": "https://openrouter.ai/qwen/qwen3.8-27b"
+  },
+  {
+   "provider": "openrouter:ionstream/fp8",
+   "network": null,
+   "model": "qwen/qwen3.8-27b:fp8",
+   "unit": "USD",
+   "inPer1M": "0.04",
+   "outPer1M": "1.95",
+   "effective": {
+    "inPer1M": "0.039214138",
+    "outPer1M": "1.948354131",
+    "cacheHitRate": 0.022981741360091932,
+    "tokens": 773485218
+   },
+   "latencyP50Ms": 12193,
+   "throughputP50": 8,
+   "endpointId": "360e373e-d445-4de9-ae30-e33d6198715b",
+   "privacy": {
+    "retention": "zero (OpenRouter ZDR)",
+    "noRetention": true,
+    "tee": false,
+    "e2ee": false,
+    "local": false
+   },
+   "notes": [
+    "OpenRouter list price via Ionstream",
+    "effective 0.039214 in / 1.948354 out per 1M at 2.3% cache hits",
+    "p50 latency 12193 ms, p50 8 tok/s (last 30 min)",
+    "zero data retention (OpenRouter ZDR)"
+   ],
+   "source": "https://openrouter.ai/qwen/qwen3.8-27b"
+  },
+  {
+   "provider": "openrouter:modal",
+   "network": null,
+   "model": "qwen/qwen3.8-27b",
+   "unit": "USD",
+   "inPer1M": "0.04",
+   "outPer1M": "2.3",
+   "effective": {
+    "inPer1M": "0.036435126",
+    "outPer1M": "2.29966745",
+    "cacheHitRate": 0.17531085747655162,
+    "tokens": 7890681271
+   },
+   "latencyP50Ms": 538,
+   "throughputP50": 74,
+   "endpointId": "efcd1b24-5dbe-40ac-afdd-270a04040bc2",
+   "privacy": {
+    "retention": "zero (OpenRouter ZDR)",
+    "noRetention": true,
+    "tee": false,
+    "e2ee": false,
+    "local": false
+   },
+   "notes": [
+    "OpenRouter list price via Modal",
+    "effective 0.036435 in / 2.299667 out per 1M at 17.5% cache hits",
+    "p50 latency 538 ms, p50 74 tok/s (last 30 min)",
+    "zero data retention (OpenRouter ZDR)"
+   ],
+   "source": "https://openrouter.ai/qwen/qwen3.8-27b"
+  },
+  {
+   "provider": "openrouter:modelrun/fp4",
+   "network": null,
+   "model": "qwen/qwen3.8-27b:fp4",
+   "unit": "USD",
+   "inPer1M": "0.2",
+   "outPer1M": "2.5",
+   "effective": {
+    "inPer1M": "0.103935802",
+    "outPer1M": "2.49969295",
+    "cacheHitRate": 0.8731607407504092,
+    "tokens": 11494421028
+   },
+   "latencyP50Ms": 299,
+   "throughputP50": 130,
+   "endpointId": "20f01041-8f57-482c-adc3-3f3e5feff1cd",
+   "privacy": {
+    "retention": "zero (OpenRouter ZDR)",
+    "noRetention": true,
+    "tee": false,
+    "e2ee": false,
+    "local": false
+   },
+   "notes": [
+    "OpenRouter list price via ModelRun",
+    "effective 0.103935 in / 2.499692 out per 1M at 87.3% cache hits",
+    "p50 latency 299 ms, p50 130 tok/s (last 30 min)",
+    "zero data retention (OpenRouter ZDR)"
+   ],
+   "source": "https://openrouter.ai/qwen/qwen3.8-27b"
+  },
+  {
+   "provider": "openrouter:near-ai/fp8",
+   "network": null,
+   "model": "qwen/qwen3.8-27b:fp8",
+   "unit": "USD",
+   "inPer1M": "0.04",
+   "outPer1M": "1.35",
+   "effective": {
+    "inPer1M": "0.036008537",
+    "outPer1M": "1.349467892",
+    "cacheHitRate": 0.1780465683073785,
+    "tokens": 5331496053
+   },
+   "latencyP50Ms": 2448,
+   "throughputP50": 44,
+   "endpointId": "c3111adb-ce3c-4a9b-9055-f66c1d7b9423",
+   "privacy": {
+    "retention": "zero (OpenRouter ZDR)",
+    "noRetention": true,
+    "tee": false,
+    "e2ee": false,
+    "local": false
+   },
+   "notes": [
+    "OpenRouter list price via Near AI",
+    "effective 0.036008 in / 1.349467 out per 1M at 17.8% cache hits",
+    "p50 latency 2448 ms, p50 44 tok/s (last 30 min)",
+    "zero data retention (OpenRouter ZDR)"
+   ],
+   "source": "https://openrouter.ai/qwen/qwen3.8-27b"
+  },
+  {
+   "provider": "openrouter:nebius/fp4",
+   "network": null,
+   "model": "qwen/qwen3.8-27b:fp4",
+   "unit": "USD",
+   "inPer1M": "0.45",
+   "outPer1M": "3",
+   "effective": {
+    "inPer1M": "0.132298276",
+    "outPer1M": "2.999999999",
+    "cacheHitRate": 0.9076861570898891,
+    "tokens": 11420934127
+   },
+   "latencyP50Ms": 828,
+   "throughputP50": 121,
+   "endpointId": "442be870-dbec-4945-9247-8f74095ee8b5",
+   "privacy": {
+    "retention": "zero (OpenRouter ZDR)",
+    "noRetention": true,
+    "tee": false,
+    "e2ee": false,
+    "local": false
+   },
+   "notes": [
+    "OpenRouter list price via Nebius",
+    "effective 0.132298 in / 2.999999 out per 1M at 90.8% cache hits",
+    "p50 latency 828 ms, p50 121 tok/s (last 30 min)",
+    "zero data retention (OpenRouter ZDR)"
+   ],
+   "source": "https://openrouter.ai/qwen/qwen3.8-27b"
+  },
+  {
+   "provider": "openrouter:parasail/fp8",
+   "network": null,
+   "model": "qwen/qwen3.8-27b:fp8",
+   "unit": "USD",
+   "inPer1M": "0.24",
+   "outPer1M": "2.2",
+   "effective": {
+    "inPer1M": "0.077494527",
+    "outPer1M": "2.199804408",
+    "cacheHitRate": 0.8551847801416891,
+    "tokens": 16866685716
+   },
+   "latencyP50Ms": 558,
+   "throughputP50": 42,
+   "endpointId": "a58a4a1f-4e83-4776-a40e-9f55b72783cb",
+   "privacy": {
+    "retention": "zero (OpenRouter ZDR)",
+    "noRetention": true,
+    "tee": false,
+    "e2ee": false,
+    "local": false
+   },
+   "notes": [
+    "OpenRouter list price via Parasail",
+    "effective 0.077494 in / 2.199804 out per 1M at 85.5% cache hits",
+    "p50 latency 558 ms, p50 42 tok/s (last 30 min)",
+    "zero data retention (OpenRouter ZDR)"
+   ],
+   "source": "https://openrouter.ai/qwen/qwen3.8-27b"
+  },
+  {
+   "provider": "openrouter:pearl-research/fp8",
+   "network": null,
+   "model": "qwen/qwen3.8-27b:fp8",
+   "unit": "USD",
+   "inPer1M": "0.1",
+   "outPer1M": "2",
+   "effective": {
+    "inPer1M": "0.045782612",
+    "outPer1M": "2",
+    "cacheHitRate": 0.6773084070090455,
+    "tokens": 10932001614
+   },
+   "latencyP50Ms": 1312,
+   "throughputP50": 75,
+   "endpointId": "fb446cbf-c76c-4d49-914b-473b5bb4ccc9",
+   "privacy": {
+    "retention": "zero (OpenRouter ZDR)",
+    "noRetention": true,
+    "tee": false,
+    "e2ee": false,
+    "local": false
+   },
+   "notes": [
+    "OpenRouter list price via Pearl Research",
+    "effective 0.045782 in / 2 out per 1M at 67.7% cache hits",
+    "p50 latency 1312 ms, p50 75 tok/s (last 30 min)",
+    "zero data retention (OpenRouter ZDR)"
+   ],
+   "source": "https://openrouter.ai/qwen/qwen3.8-27b"
+  },
+  {
+   "provider": "openrouter:primeintellect/fp8",
+   "network": null,
+   "model": "qwen/qwen3.8-27b:fp8",
+   "unit": "USD",
+   "inPer1M": "0.439",
+   "outPer1M": "3.12",
+   "effective": {
+    "inPer1M": "0.213716824",
+    "outPer1M": "3.174454216",
+    "cacheHitRate": 0.5841938200698275,
+    "tokens": 145171868
+   },
+   "latencyP50Ms": 322,
+   "throughputP50": 91,
+   "endpointId": "a5d87341-6ae9-4c73-94c3-447f3c3b6373",
+   "privacy": {
+    "retention": "zero (OpenRouter ZDR)",
+    "noRetention": true,
+    "tee": false,
+    "e2ee": false,
+    "local": false
+   },
+   "notes": [
+    "OpenRouter list price via PrimeIntellect",
+    "effective 0.213716 in / 3.174454 out per 1M at 58.4% cache hits",
+    "p50 latency 322 ms, p50 91 tok/s (last 30 min)",
+    "zero data retention (OpenRouter ZDR)"
+   ],
+   "source": "https://openrouter.ai/qwen/qwen3.8-27b"
+  },
+  {
+   "provider": "openrouter:reka/fp8",
+   "network": null,
+   "model": "qwen/qwen3.8-27b:fp8",
+   "unit": "USD",
+   "inPer1M": "0.45",
+   "outPer1M": "3.2",
+   "effective": {
+    "inPer1M": "0.444757656",
+    "outPer1M": "3.199410471",
+    "cacheHitRate": 0.012823756317430806,
+    "tokens": 3168692877
+   },
+   "latencyP50Ms": 753,
+   "throughputP50": 32,
+   "endpointId": "15086968-df2f-4d69-86bb-c74c31644bb6",
+   "privacy": {
+    "retention": "zero (OpenRouter ZDR)",
+    "noRetention": true,
+    "tee": false,
+    "e2ee": false,
+    "local": false
+   },
+   "notes": [
+    "OpenRouter list price via Reka",
+    "effective 0.444757 in / 3.19941 out per 1M at 1.3% cache hits",
+    "p50 latency 753 ms, p50 32 tok/s (last 30 min)",
+    "zero data retention (OpenRouter ZDR)"
+   ],
+   "source": "https://openrouter.ai/qwen/qwen3.8-27b"
+  },
+  {
+   "provider": "openrouter:siliconflow/fp8",
+   "network": null,
+   "model": "qwen/qwen3.8-27b:fp8",
+   "unit": "USD",
+   "inPer1M": "0.425",
+   "outPer1M": "2.55",
+   "effective": {
+    "inPer1M": "0.294555461",
+    "outPer1M": "2.549672303",
+    "cacheHitRate": 0.3832812428334611,
+    "tokens": 10721153
+   },
+   "latencyP50Ms": 1965,
+   "throughputP50": 55,
+   "endpointId": "ad89633e-dcff-478f-bac3-31fceadc47d2",
+   "privacy": {
+    "retention": "provider retains prompts",
+    "noRetention": false,
+    "tee": false,
+    "e2ee": false,
+    "local": false
+   },
+   "notes": [
+    "OpenRouter list price via SiliconFlow",
+    "effective 0.294555 in / 2.549672 out per 1M at 38.3% cache hits",
+    "p50 latency 1965 ms, p50 55 tok/s (last 30 min)"
+   ],
+   "source": "https://openrouter.ai/qwen/qwen3.8-27b"
+  },
+  {
+   "provider": "openrouter:streamlake",
+   "network": null,
+   "model": "qwen/qwen3.8-27b",
+   "unit": "USD",
+   "inPer1M": "0.5",
+   "outPer1M": "3",
+   "effective": {
+    "inPer1M": "0.115668465",
+    "outPer1M": "1.049330769",
+    "cacheHitRate": 0.4235430645217846,
+    "tokens": 1092143884
+   },
+   "latencyP50Ms": 1056,
+   "throughputP50": 63,
+   "endpointId": "7be5e9de-8a58-47e8-ae55-9aae2c3de86a",
+   "privacy": {
+    "retention": "provider retains prompts",
+    "noRetention": false,
+    "tee": false,
+    "e2ee": false,
+    "local": false
+   },
+   "notes": [
+    "OpenRouter list price via StreamLake",
+    "effective 0.115668 in / 1.04933 out per 1M at 42.4% cache hits",
+    "p50 latency 1056 ms, p50 63 tok/s (last 30 min)"
+   ],
+   "source": "https://openrouter.ai/qwen/qwen3.8-27b"
+  },
+  {
+   "provider": "openrouter:tenstorrent/fp8",
+   "network": null,
+   "model": "qwen/qwen3.8-27b:fp8",
+   "unit": "USD",
+   "inPer1M": "0.15",
+   "outPer1M": "1.6",
+   "effective": {
+    "inPer1M": "0.078772845",
+    "outPer1M": "1.599429559",
+    "cacheHitRate": 0.7118161541467061,
+    "tokens": 1924019169
+   },
+   "latencyP50Ms": 564,
+   "throughputP50": 78,
+   "endpointId": "214262f7-b9f8-44a9-860d-001c353a9fb7",
+   "privacy": {
+    "retention": "zero (OpenRouter ZDR)",
+    "noRetention": true,
+    "tee": false,
+    "e2ee": false,
+    "local": false
+   },
+   "notes": [
+    "OpenRouter list price via Tenstorrent",
+    "effective 0.078772 in / 1.599429 out per 1M at 71.2% cache hits",
+    "p50 latency 564 ms, p50 78 tok/s (last 30 min)",
+    "zero data retention (OpenRouter ZDR)"
+   ],
+   "source": "https://openrouter.ai/qwen/qwen3.8-27b"
+  },
+  {
+   "provider": "openrouter:wafer/fp8",
+   "network": null,
+   "model": "qwen/qwen3.8-27b:fp8",
+   "unit": "USD",
+   "inPer1M": "0.06",
+   "outPer1M": "1.96",
+   "effective": {
+    "inPer1M": "0.059191319",
+    "outPer1M": "1.959423875",
+    "cacheHitRate": 0.7859466236272885,
+    "tokens": 16869139325
+   },
+   "latencyP50Ms": 378,
+   "throughputP50": 163,
+   "endpointId": "ac64fd29-1011-4b18-9e66-42d1cecd983c",
+   "privacy": {
+    "retention": "zero (OpenRouter ZDR)",
+    "noRetention": true,
+    "tee": false,
+    "e2ee": false,
+    "local": false
+   },
+   "notes": [
+    "OpenRouter list price via Wafer",
+    "effective 0.059191 in / 1.959423 out per 1M at 78.6% cache hits",
+    "p50 latency 378 ms, p50 163 tok/s (last 30 min)",
+    "zero data retention (OpenRouter ZDR)"
+   ],
+   "source": "https://openrouter.ai/qwen/qwen3.8-27b"
+  },
+  {
+   "provider": "chutes-bittensor",
+   "network": null,
+   "model": "Qwen/Qwen3.8-27B-TEE",
+   "unit": "USD",
+   "inPer1M": "0.039",
+   "outPer1M": "1.25",
+   "privacy": {
+    "retention": "unknown",
+    "noRetention": false,
+    "tee": true,
+    "e2ee": false,
+    "local": false
+   },
+   "notes": [
+    "Bittensor SN64 (Chutes) list price",
+    "TAO per 1M: in 0.000216794213929195, out 0.006948532497730609",
+    "confidential compute (TEE)"
+   ],
+   "source": "https://llm.chutes.ai/v1/models"
+  },
+  {
+   "provider": "pearl-labs",
+   "network": null,
+   "model": "Qwen/Qwen3.8-27B",
+   "unit": "USD",
+   "inPer1M": "0.1",
+   "outPer1M": "2",
+   "notes": [
+    "cached input 0.02/1M",
+    "page says special launch pricing; paid in USD, not PRL"
+   ],
+   "source": "https://pearlresearch.ai/pricing"
+  },
+  {
+   "provider": "pearl-labs",
+   "network": null,
+   "model": "deepseek-ai/DeepSeek-V4.1-Flash",
+   "unit": "USD",
+   "inPer1M": "0.05",
+   "outPer1M": "0.3",
+   "notes": [
+    "cached input 0.003/1M",
+    "page says special launch pricing; paid in USD, not PRL"
+   ],
+   "source": "https://pearlresearch.ai/pricing"
+  },
+  {
+   "provider": "venice",
+   "network": null,
+   "model": "qwen/qwen3.8-27b",
+   "veniceId": "qwen-3-8-27b",
+   "unit": "USD",
+   "inPer1M": "0.45",
+   "outPer1M": "3.2",
+   "privacy": {
+    "retention": "none (Venice private)",
+    "noRetention": true,
+    "tee": false,
+    "e2ee": false,
+    "local": false
+   },
+   "notes": [
+    "Venice list price; DIEM per 1M: in 0.45, out 3.2",
+    "Venice privacy label: private",
+    "payable in USD, staked DIEM, or USDC per request via x402"
+   ],
+   "source": "https://api.venice.ai/api/v1/models"
+  },
+  {
+   "provider": "venice",
+   "network": null,
+   "model": "venice/claude-sonnet-5-5",
+   "veniceId": "claude-sonnet-5-5",
+   "unit": "USD",
+   "inPer1M": "2",
+   "outPer1M": "10",
+   "privacy": {
+    "retention": "Venice anonymized",
+    "noRetention": false,
+    "tee": false,
+    "e2ee": false,
+    "local": false
+   },
+   "notes": [
+    "Venice list price; DIEM per 1M: in 2, out 10",
+    "cached input 0.1/1M",
+    "Venice privacy label: anonymized",
+    "payable in USD, staked DIEM, or USDC per request via x402"
+   ],
+   "source": "https://api.venice.ai/api/v1/models"
+  },
+  {
+   "provider": "venice",
+   "network": null,
+   "model": "qwen/qwen3.8-27b:e2ee",
+   "veniceId": "e2ee-qwen3-8-27b",
+   "unit": "USD",
+   "inPer1M": "0.47",
+   "outPer1M": "3.53",
+   "privacy": {
+    "retention": "none (Venice private)",
+    "noRetention": true,
+    "tee": true,
+    "e2ee": true,
+    "local": false
+   },
+   "notes": [
+    "Venice list price; DIEM per 1M: in 0.47, out 3.53",
+    "cached input 0.047/1M",
+    "Venice privacy label: private",
+    "end-to-end encrypted",
+    "TEE attestation",
+    "payable in USD, staked DIEM, or USDC per request via x402"
+   ],
+   "source": "https://api.venice.ai/api/v1/models"
+  }
+ ]
+}

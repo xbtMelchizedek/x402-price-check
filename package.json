@@ -1,0 +1,58 @@
+{
+  "name": "x402-price-check",
+  "version": "0.1.0",
+  "description": "Check an x402 402 Payment Required quote before an agent pays it: compare the price with justweight's list price for that model and token count, and approve only under a max premium and inside an agent-spendcap budget. Library, CLI and MCP tool. Never signs or pays.",
+  "keywords": [
+    "x402",
+    "402",
+    "payment-required",
+    "agents",
+    "mcp",
+    "llm",
+    "inference",
+    "price",
+    "budget",
+    "spend-limit",
+    "stablecoin",
+    "usdc"
+  ],
+  "homepage": "https://xbtmelchizedek.github.io/x402-price-check/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xbtMelchizedek/x402-price-check.git"
+  },
+  "bugs": {
+    "url": "https://github.com/xbtMelchizedek/x402-price-check/issues"
+  },
+  "author": "xbtMelchizedek",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.mjs",
+    "./compare": "./src/compare.mjs",
+    "./x402": "./src/x402.mjs",
+    "./mock": "./src/mock.mjs",
+    "./package.json": "./package.json"
+  },
+  "bin": {
+    "x402-price-check": "src/cli.mjs"
+  },
+  "files": [
+    "src",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE",
+    "NOTICE"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "prepublishOnly": "npm test"
+  },
+  "dependencies": {
+    "agent-spendcap": "github:xbtMelchizedek/agent-spendcap#v0.2.0",
+    "justweight": "github:xbtMelchizedek/justweight#v0.4.0"
+  }
+}

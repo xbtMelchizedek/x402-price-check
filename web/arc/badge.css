@@ -1,0 +1,54 @@
+/* Adapted from Arc's free badge (registry/components/badge/badge.module.css, MIT, see LICENSE).
+   Changes: CSS-module :global() wrappers removed, classes namespaced under .badge, only the md size,
+   the dot mark and the status tones kept. */
+.badge {
+  --badge-tone: var(--text-secondary);
+  --badge-tint: 10%;
+  --badge-ink: 84%;
+  --badge-background: color-mix(in oklab, var(--badge-tone) var(--badge-tint), var(--surface));
+  --badge-foreground: color-mix(in oklab, var(--badge-tone) var(--badge-ink), var(--foreground));
+  --badge-color: color-mix(in oklab, var(--badge-tone) 88%, var(--foreground));
+  --badge-border: transparent;
+  --badge-radius: 6px;
+  --badge-height: 24px;
+  --badge-pad: 10px;
+  --badge-gap: 5px;
+  --badge-dot: 6px;
+  box-sizing: border-box;
+  display: inline-flex;
+  min-height: var(--badge-height);
+  flex: none;
+  align-items: center;
+  gap: var(--badge-gap);
+  vertical-align: middle;
+  border: 1px solid var(--badge-border);
+  border-radius: var(--badge-radius);
+  padding: 0 var(--badge-pad) 0 calc(var(--badge-pad) - 1px);
+  color: var(--badge-foreground);
+  background: var(--badge-background);
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -.005em;
+  line-height: 1;
+  white-space: nowrap;
+  transition: border-color var(--duration-standard) var(--ease-standard), background-color var(--duration-standard) var(--ease-standard), color var(--duration-standard) var(--ease-standard);
+}
+:root[data-theme="dark"] .badge { --badge-tint: 12%; --badge-ink: 94%; }
+.badge-dot {
+  display: block;
+  width: var(--badge-dot);
+  height: var(--badge-dot);
+  flex: none;
+  border-radius: 50%;
+  background: var(--badge-color);
+}
+.badge.neutral { --badge-tone: var(--text-secondary); }
+.badge.info { --badge-tone: var(--info, var(--tone-sky)); }
+.badge.success { --badge-tone: var(--success); }
+.badge.warning { --badge-tone: var(--warning); --badge-ink: 76%; }
+.badge.danger { --badge-tone: var(--danger); }
+@media (prefers-reduced-motion: reduce) {
+  .badge { transition-duration: var(--duration-instant); }
+}

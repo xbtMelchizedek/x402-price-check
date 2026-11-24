@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>x402-price-check: is this 402 quote a fair price?</title>
+<meta name="description" content="Before an agent pays an x402 402 Payment Required quote for inference, compare it with justweight list prices for the same model and tokens, and approve only under a max premium and an agent-spendcap budget. Library, CLI and MCP tool. Never pays.">
+<script>document.documentElement.dataset.theme = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';</script>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="arc/foundation.css">
+<link rel="stylesheet" href="arc/badge.css">
+<link rel="stylesheet" href="styles.css">
+<script type="importmap">{ "imports": { "justweight/core": "./lib/justweight-core.mjs" } }</script>
+</head>
+<body>
+<main>
+  <header>
+    <h1>x402-price-check</h1>
+    <p class="lede">An inference endpoint answers <b>402 Payment Required</b> with an x402 quote. Before your agent pays, check it against what <a href="https://xbtmelchizedek.github.io/justweight/">justweight</a> lists for the same model and token count, under your max premium and budget.</p>
+    <p class="muted"><a href="https://github.com/xbtMelchizedek/x402-price-check">GitHub</a> · Budget by <a href="https://github.com/xbtMelchizedek/agent-spendcap">agent-spendcap</a> · Reads x402 v2 and v1 (<a href="https://github.com/x402-foundation/x402/tree/0e6e8c55d86b4f14234fb6e49a4052074fb93e57/specs">spec @ 0e6e8c5</a>) · Never signs or pays</p>
+  </header>
+
+  <section class="panel">
+    <h2>Try it</h2>
+    <pre>npx -y github:xbtMelchizedek/x402-price-check demo</pre>
+    <p class="muted">A local mock x402 endpoint quotes list price +10% and then 3x list. The first is paid with a mock payment and the second is refused before anything is sent. To check a real endpoint's quote without paying: <code>npx -y github:xbtMelchizedek/x402-price-check probe &lt;url&gt; --body request.json</code>.</p>
+  </section>
+
+  <section class="panel">
+    <h2>Check a quote here</h2>
+    <p class="muted">Paste a <code>PAYMENT-REQUIRED</code> header value, a v1 402 body, a PaymentRequired object or an MCP tool result. Everything runs on this page; nothing is sent anywhere.</p>
+    <div class="actions" id="examples">
+      <button type="button" class="secondary" data-ex="v2-http-header.txt">Spec v2 header</button>
+      <button type="button" class="secondary" data-ex="v1-payment-required.json">Spec v1 body</button>
+      <button type="button" class="secondary" data-ex="mcp-tool-result.json">Spec MCP result</button>
+      <button type="button" class="secondary" id="fair">Fair quote for this model</button>
+    </div>
+    <label>Quote<textarea id="quote" spellcheck="false" placeholder="eyJ4NDAyVmVyc2lvbiI6Mi..."></textarea></label>
+    <div class="grid2" style="margin-top:12px">
+      <label>Model<input id="model" list="models" value="deepseek/deepseek-v4.1-flash" autocomplete="off"></label>
+      <datalist id="models"></datalist>
+      <label>Input tokens<input id="in" type="number" min="0" value="2000"></label>
+      <label>Max output tokens<input id="out" type="number" min="0" value="1000"></label>
+      <label>Max premium %<input id="prem" value="25" inputmode="decimal"></label>
+      <label>Compare with<select id="ref"><option value="cheapest">cheapest listing</option><option value="median">median listing</option></select></label>
+    </div>
+    <div class="actions"><button type="button" id="go">Check</button></div>
+    <div id="result" role="status" aria-live="polite"></div>
+    <div class="wrap"><table id="opts"></table></div>
+    <p class="muted" id="snapnote">Loading justweight prices…</p>
+  </section>
+
+  <section class="panel">
+    <h2>How the check works</h2>
+    <ol>
+      <li><b>Quote in USD.</b> Each <code>exact</code> or <code>upto</code> option is priced only if its asset is in x402's own table of USD-pegged default assets (42 on 32 networks). Fiat codes, unknown tokens and other schemes stay unpriced, with the reason. The cheapest priced option is checked.</li>
+      <li><b>List price.</b> justweight's cost for the same model at your input tokens and max output, at the cheapest listing or the median. Batch-only tiers are skipped.</li>
+      <li><b>Premium.</b> (quote − list) / list, rounded up. Over your max premium is a reject. A model justweight doesn't list is a reject.</li>
+      <li><b>Budget.</b> In the CLI, library and MCP tool, an approved quote must also pass an agent-spendcap policy and places a hold. This page has no budget.</li>
+    </ol>
+    <table>
+      <tr><th>Quote from</th><th>Spec</th><th>Field</th></tr>
+      <tr><td><code>PAYMENT-REQUIRED</code> header (base64)</td><td>x402 v2 (v2.0, 2025-12-9)</td><td><code>accepts[].amount</code></td></tr>
+      <tr><td>402 JSON body</td><td>x402 v1</td><td><code>accepts[].maxAmountRequired</code></td></tr>
+      <tr><td>MCP tool result</td><td>transports-v2/mcp.md</td><td><code>structuredContent</code></td></tr>
+    </table>
+  </section>
+
+  <section class="panel">
+    <h2>As an MCP tool</h2>
+    <pre>{ "mcpServers": { "x402-price-check": { "command": "npx",
+  "args": ["-y", "github:xbtMelchizedek/x402-price-check", "mcp", "--max-day", "1"] } } }</pre>
+    <p class="muted">Tools: <code>x402_price_check</code>, <code>x402_settle</code>, <code>x402_release</code>, <code>x402_budget</code>. Part of the <a href="https://github.com/xbtMelchizedek/x402-price-check#part-of-the-agent-inference-kit">agent inference kit</a>.</p>
+  </section>
+</main>
+<script type="module" src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+body { margin: 0; background: var(--background); color: var(--foreground); font-family: var(--font-body, Inter, system-ui, sans-serif); }
+main { max-width: 960px; margin: 0 auto; padding: 32px 20px 64px; display: grid; gap: 20px; }
+main > * { min-width: 0; }
+h1 { font-family: var(--font-display, Geist, Inter, sans-serif); font-weight: 500; font-size: 32px; margin: 0 0 8px; }
+h2 { font-weight: 500; font-size: 18px; margin: 0 0 10px; }
+.lede, .muted { color: var(--text-secondary); }
+.muted { font-size: 14px; }
+.panel { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-panel, 26px); padding: 20px; }
+label { display: grid; gap: 6px; font-size: 14px; color: var(--text-secondary); }
+select { font: inherit; font-size: 16px; padding: 10px 14px; border-radius: var(--radius-control, 18px); border: 1px solid var(--border); background: var(--background); color: var(--foreground); width: 100%; min-width: 0; text-overflow: ellipsis; }
+button { font: inherit; font-weight: 500; padding: 8px 16px; border-radius: var(--radius-control, 18px); border: 0; background: var(--accent); color: var(--accent-foreground); cursor: pointer; transition: transform var(--duration-fast, 160ms) var(--ease-standard, ease); }
+button.secondary { background: var(--surface-muted, var(--background)); color: var(--foreground); border: 1px solid var(--border); }
+button:active { transform: scale(0.97); }
+.actions { display: flex; gap: 8px; flex-wrap: wrap; margin: 10px 0; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th, td { text-align: left; padding: 8px 6px; border-bottom: 1px solid var(--border-subtle, var(--border)); vertical-align: middle; }
+th { font-weight: 500; color: var(--text-secondary); }
+td.num { font-variant-numeric: tabular-nums; white-space: nowrap; }
+code { font-size: 12px; word-break: break-all; }
+.ok { color: var(--success, #1a7f37); }
+.bad { color: var(--danger, #cf222e); }
+a { color: var(--accent-strong, var(--accent)); }
+.wrap { overflow-x: auto; }
+textarea { font: 13px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace; width: 100%; box-sizing: border-box; min-height: 260px; padding: 12px; border-radius: 14px; border: 1px solid var(--border); background: var(--background); color: var(--foreground); resize: vertical; }
+input { font: inherit; font-size: 16px; padding: 10px 14px; border-radius: var(--radius-control, 18px); border: 1px solid var(--border); background: var(--background); color: var(--foreground); width: 100%; min-width: 0; box-sizing: border-box; }
+.grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+.bar { height: 10px; border-radius: 999px; background: var(--border-subtle, var(--border)); overflow: hidden; margin: 6px 0 12px; }
+.bar > span { display: block; height: 100%; background: var(--accent); transition: width var(--duration-fast, 160ms) var(--ease-standard, ease); }
+.bar.full > span { background: var(--danger, #cf222e); }
+#result { min-height: 1.5em; }
+.row-actions { display: flex; gap: 6px; }
+.row-actions button { padding: 4px 10px; font-size: 13px; }
+input { font: inherit; font-size: 16px; padding: 10px 14px; border-radius: var(--radius-control, 18px); border: 1px solid var(--border); background: var(--background); color: var(--foreground); width: 100%; min-width: 0; box-sizing: border-box; }
+.chips { display: flex; gap: 6px; flex-wrap: wrap; margin: 10px 0; }
+.chips button { padding: 4px 12px; font-size: 13px; }
+.chips button[aria-pressed="false"] { background: var(--surface-muted, var(--background)); color: var(--foreground); border: 1px solid var(--border); }
+.ev { padding: 12px 0; border-bottom: 1px solid var(--border-subtle, var(--border)); }
+.ev:last-child { border-bottom: 0; }
+.ev h3 { font-size: 15px; font-weight: 500; margin: 4px 0; overflow-wrap: anywhere; }
+.ev p { margin: 2px 0; font-size: 14px; color: var(--text-secondary); overflow-wrap: anywhere; }
+.down { color: var(--success, #1a7f37); }
+.up { color: var(--danger, #cf222e); }
+pre { font-size: 12px; overflow-x: auto; background: var(--background); border: 1px solid var(--border); border-radius: 14px; padding: 12px; margin: 8px 0; }
+#meta { margin-bottom: 12px; }
+h3 { font-size: 14px; font-weight: 500; margin: 8px 0 0; color: var(--text-secondary); }
+ol { padding-left: 20px; }
+li { margin: 6px 0; }
+#sum { margin: 12px 0; }
+input[type=file] { padding: 8px; }
+#result p { margin: 6px 0; overflow-wrap: anywhere; }
+textarea { min-height: 140px; }

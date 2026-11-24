@@ -1,0 +1,8 @@
+node_modules/
+_site/
+.env
+*.key
+*.pem
+*.seed
+*.jsonl
+*.lock
